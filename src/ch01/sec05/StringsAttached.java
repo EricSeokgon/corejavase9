@@ -7,7 +7,7 @@ public class StringsAttached {
         System.out.println(location);
 
 
-        String names = "Peter, Paul, mary";
+        String names = "Peter, Paccccccccul, mary";
         String[] result = names.split(", ");
         int i = 0;
         while (i < result.length) {
