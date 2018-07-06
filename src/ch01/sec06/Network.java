@@ -11,6 +11,17 @@ public class Network {
             this.name = name;
             friends = new ArrayList<>();
         }
+
+        public Member enroll(String name) {
+            Member newMember = new Member(name);
+            members.add(newMember);
+            return newMember;
+        }
+
+        public void deavtivate() {
+            members.remove(this);
+        }
+
     }
 
     private ArrayList<Member> members = new ArrayList<>();
