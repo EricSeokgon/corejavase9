@@ -12,15 +12,19 @@ public class Network {
             friends = new ArrayList<>();
         }
 
-        public Member enroll(String name) {
-            Member newMember = new Member(name);
-            members.add(newMember);
-            return newMember;
+        public void deactivate() {
+            unenroll(this);
         }
 
-        public void deactivate() {
-            members.remove(this);
-        }
+    }
+
+    public Member enroll(String name) {
+        Member newMember = new Member(name);
+        members.add(newMember);
+        return newMember;
+    }
+
+    public void unenroll(Member member) {
 
     }
 
