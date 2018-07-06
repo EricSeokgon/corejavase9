@@ -18,7 +18,7 @@ public class Network {
             return newMember;
         }
 
-        public void deavtivate() {
+        public void deactivate() {
             members.remove(this);
         }
 
