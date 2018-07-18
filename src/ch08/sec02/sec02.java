@@ -19,6 +19,17 @@ public class sec02 {
         Stream<Double> random = Stream.generate(Math::random);
         Stream<BigInteger> integers = Stream.iterate(BigInteger.ZERO, n -> n.add(BigInteger.ONE));
 
+        BigInteger limit = new BigInteger("10000000");
+        Stream<BigInteger> instegers = Stream.iterate(BigInteger.ZERO,
+                n -> n.compareTo(limit) < 0,
+                n -> n.add(BigInteger.ONE));
+
+        System.out.println(words);
+        System.out.println(song);
+        System.out.println(slience);
+        System.out.println(echos);
+        System.out.println(random);
+        System.out.println(instegers);
 
     }
 }
