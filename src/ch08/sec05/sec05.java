@@ -17,5 +17,10 @@ public class sec05 {
 
         Stream<String> uniqueWords = Stream.of("merrily", "merrily", "merrily", "gently").distinct();
         Stream<String> longestFirst = words.sorted(Comparator.comparing(String::length).reversed());
+
+        Object[] powers = Stream.iterate(1.0, p -> p * 2)
+                .peek(e -> System.out.println("Fetching " + e))
+                .limit(20).toArray();
+
     }
 }
