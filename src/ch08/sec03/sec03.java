@@ -10,9 +10,9 @@ import java.util.stream.Stream;
 
 public class sec03 {
     public static void main(String[] args) throws IOException {
-        String contets = new String(Files.readAllBytes(
+        String contents = new String(Files.readAllBytes(
                 Paths.get("C:\\windows-version.txt")), StandardCharsets.UTF_8);
-        List<String> words = List.of(contets.split("\\PL+"));
+        List<String> words = List.of(contents.split("\\PL+"));
         Stream<String> longWords = words.stream().filter(w -> w.length() > 12);
         Stream<String> lowercaseWorlds = words.stream().map(String::toLowerCase);
         Stream<String> firstLetters = words.stream().map(s -> s.substring(0, 1));
