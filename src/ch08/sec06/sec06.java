@@ -8,5 +8,9 @@ public class sec06 {
         Stream<String> words = Stream.of("홍길동", "유저인증", "자바");
         Optional<String> largest = words.max(String::compareToIgnoreCase);
         System.out.println("largest: " + largest.orElse(""));
+
+        //Optional<String> startsWithQ = words.parallel().filter(s -> s.startsWith("Q")).findAny();
+
+
     }
 }
