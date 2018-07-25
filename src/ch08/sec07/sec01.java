@@ -3,7 +3,7 @@ package ch08.sec07;
 import java.util.Optional;
 import java.util.stream.Stream;
 
-public class sec07 {
+public class sec01 {
     public static void main(String[] args) {
         Stream<String> words = Stream.of("홍길동", "유저인증", "자바");
         Optional<String> optionalString = words.max(String::compareToIgnoreCase);
