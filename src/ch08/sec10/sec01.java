@@ -1,6 +1,9 @@
 package ch08.sec10;
 
-import java.util.*;
+
+import java.util.List;
+import java.util.Locale;
+import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -11,11 +14,17 @@ public class sec01 {
                 Collectors.toMap(
                         Locale::getDisplayLanguage,
                         loc -> loc.getDisplayLanguage(loc),
-                (existingValue, newValue) -> existingValue));
+                        (existingValue, newValue) -> existingValue));
 
         Map<String, List<Locale>> countryToLocales = locales.collect(Collectors.groupingBy(Locale::getCountry));
 
         List<Locale> swissLocales = countryToLocales.get("CH");
+
+        Map<Boolean, List<Locale>> englishAndOtherLocales = locales.collect(
+                Collectors.partitioningBy(l -> l.getLanguage().equals("en")));
+
+        List<Locale> englishLocales = englishAndOtherLocales.get(true);
+
 
     }
 }
