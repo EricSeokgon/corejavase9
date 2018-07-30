@@ -16,5 +16,6 @@ public class sec01 {
 
         Map<String, Long> countryToLocaleCounts = locales.collect(
                 groupingBy(Locale::getCountry, counting()));
+
     }
 }
