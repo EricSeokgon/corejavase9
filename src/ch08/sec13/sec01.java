@@ -13,9 +13,5 @@ public class sec01 {
         String sentence = "\uD835\uDD46 is the set of octonions.";
 
         IntStream cpdes = sentence.codePoints();
-
-
-
-
     }
 }
