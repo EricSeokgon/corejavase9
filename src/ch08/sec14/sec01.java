@@ -19,5 +19,6 @@ public class sec01 {
         Map<Integer, Long> shortWordCounters = words.parallelStream().filter(s -> s.length() < 12)
                 .collect(groupingBy(String::length, counting()));
 
+
     }
 }
