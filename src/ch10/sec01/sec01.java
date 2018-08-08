@@ -7,12 +7,12 @@ public class sec01 {
     public static void main(String[] args) {
         Runnable hellos = () -> {
             for (int i = 1; i <= 1000; i++) {
-                System.out.println("Hello " + 1);
+                System.out.println("Hello " + i);
             }
         };
         Runnable goodbyes = () -> {
             for (int i = 1; i <= 1000; i++) {
-                System.out.println("Goodbye " + 1);
+                System.out.println("Goodbye " + i);
             }
 
         };
