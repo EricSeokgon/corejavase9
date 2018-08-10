@@ -22,6 +22,7 @@ public class sec01 {
         ExecutorService executor = Executors.newCachedThreadPool();
         executor.execute(hellos);
         executor.execute(goodbyes);
+
     }
 }
 
