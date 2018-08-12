@@ -15,7 +15,7 @@ public class sec01 {
         };
         Runnable goodbyes = () -> {
             int i = 1;
-            while (!done) i++
+            while (!done) i++;
             System.out.println("Goodbye " + i);
 
         };
